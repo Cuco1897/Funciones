@@ -13,7 +13,7 @@ void bienvenida(){
 void navegarAlSur(int *x, int *y){
     printf("Navegando al SUR! \n");
     *x = *x+1;
-    *y+=10;
+    *y-=10;
 }
 void navegarAlnorte(int *x, int *y){
     printf("Navegando al NORTE! \n");
@@ -27,7 +27,7 @@ void navegarAleste(int *x, int *y){
 }
 void navegarAloeste(int *x, int *y){
     printf("Navegando al OESTE! \n");
-    *x = *x+1;
+    *x = *x-1;
     *y+=10;
 }
 
@@ -41,16 +41,6 @@ int main() {
     int y = 0;
 
     bienvenida();
-    imprimirPosicion(x, y);
-
-    navegarAlSur(&x, &y);
-
-    imprimirPosicion(x, y);
-
-    printf("El valor de X es: %d \n", x);
-    printf("La direccion de X es: %p \n", &x);
-    int *direccion_x = &x;
-    printf("La direccion de X guardada en otra variable es: %p \n", direccion_x);
 
     navegarAlSur(&x, &y);
      imprimirPosicion(x, y);
